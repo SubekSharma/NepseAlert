@@ -19,10 +19,10 @@ while 1==1:
     d = float(c)
 
     if(d > nep):
-        # print("THE NEPSE IS HIGHER THAN YOU WANT.🔥")
+         print("THE NEPSE IS HIGHER THAN YOU WANT.🔥")
         message="THE NEPSE IS HIGHER THAN YOU WANT.🔥"
     else:
-        # print("THE NEPSE IS BAD.🥲")
+         print("THE NEPSE IS BAD.🥲")
 
     
 
