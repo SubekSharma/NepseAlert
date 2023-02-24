@@ -10,7 +10,7 @@ sen = int(input("ENTER YOUR DESIRED SENSITIVE VALUE:"))
 
 while 1==1:
 
-    req = requests.get("http://www.nepalstock.com/stocklive")
+    req = requests.get("http://www.nepalstock.com")
     soup = BeautifulSoup(req.content, "html.parser")
     a = soup.find_all(class_="current-index")
     print(a[0].get_text())
@@ -19,10 +19,10 @@ while 1==1:
     d = float(c)
 
     if(d > nep):
-         print("THE NEPSE IS HIGHER THAN YOU WANT.🔥")
-        message="THE NEPSE IS HIGHER THAN YOU WANT.🔥"
+        print("THE NEPSE IS HIGHER THAN YOU WANT.🔥")
+        message=("THE NEPSE IS HIGHER THAN YOU WANT.🔥")
     else:
-         print("THE NEPSE IS BAD.🥲")
+        print("THE NEPSE IS BAD.🥲")
 
     
 
@@ -41,14 +41,14 @@ while 1==1:
 time.sleep(1)
 
 
-port = 587  
-smtp_server = "smtp.gmail.com"
-sender_email = "someone1@gmail.com"    #use your email1
-receiver_email = "someone2@gmail.com"    #use your email2
-password = input("Enter your password!")
+# port = 587  
+# smtp_server = "smtp.gmail.com"
+# sender_email = "someone1@gmail.com"    #use your email1
+# receiver_email = "someone2@gmail.com"    #use your email2
+# password = input("Enter your password!")
 
-context = ssl.create_default_context()
-with smtplib.SMTP(smtp_server, port) as server:
-    server.starttls(context=context)
-    server.login(sender_email, password)
-    server.sendmail(sender_email, receiver_email, message)
+# context = ssl.create_default_context()
+# with smtplib.SMTP(smtp_server, port) as server:
+#     server.starttls(context=context)
+#     server.login(sender_email, password)
+#     server.sendmail(sender_email, receiver_email, message)
